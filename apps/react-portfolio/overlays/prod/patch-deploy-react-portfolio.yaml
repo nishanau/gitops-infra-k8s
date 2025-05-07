@@ -1,0 +1,11 @@
+# apps/react-portfolio/overlays/prod/patch-deploy-react-portfolio.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-portfolio
+spec:
+  template:
+    metadata:
+      labels:
+        environment: prod
+

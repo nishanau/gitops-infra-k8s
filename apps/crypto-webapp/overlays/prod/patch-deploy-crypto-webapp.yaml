@@ -1,0 +1,11 @@
+# apps/crypto-webapp/overlays/prod/patch-deploy-crypto-webapp.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crypto-webapp
+spec:
+  template:
+    metadata:
+      labels:
+        environment: prod
+

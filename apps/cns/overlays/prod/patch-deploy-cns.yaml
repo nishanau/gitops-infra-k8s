@@ -1,0 +1,11 @@
+# apps/cns/overlays/prod/patch-deploy-cns.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cns
+spec:
+  template:
+    metadata:
+      labels:
+        environment: prod
+

@@ -1,0 +1,23 @@
+# apps/react-portfolio/base/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-portfolio
+  labels:
+    app: react-portfolio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-portfolio
+  template:
+    metadata:
+      labels:
+        app: react-portfolio
+    spec:
+      containers:
+      - name: react-portfolio
+        image: nishans0/react-portfolio:latest
+        ports:
+        - containerPort: 80
+

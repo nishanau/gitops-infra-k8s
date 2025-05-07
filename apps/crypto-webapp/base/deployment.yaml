@@ -1,0 +1,23 @@
+# apps/crypto-webapp/base/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crypto-webapp
+  labels:
+    app: crypto-webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crypto-webapp
+  template:
+    metadata:
+      labels:
+        app: crypto-webapp
+    spec:
+      containers:
+      - name: crypto-webapp
+        image: nishans0/crypto-webapp:latest
+        ports:
+        - containerPort: 3000
+

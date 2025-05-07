@@ -1,0 +1,23 @@
+# apps/cns/base/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cns
+  labels:
+    app: cns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cns
+  template:
+    metadata:
+      labels:
+        app: cns
+    spec:
+      containers:
+      - name: cns
+        image: nishans0/cns:latest
+        ports:
+        - containerPort: 3005
+

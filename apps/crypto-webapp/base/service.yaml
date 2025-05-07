@@ -1,0 +1,13 @@
+# apps/crypto-webapp/base/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: crypto-webapp
+spec:
+  type: ClusterIP
+  selector:
+    app: crypto-webapp
+  ports:
+  - port: 80
+    targetPort: 3000
+

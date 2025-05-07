@@ -1,0 +1,20 @@
+# apps/crypto-webapp/overlays/prod/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+namespace: default
+
+patches:
+  - target:
+      kind: Deployment
+      name: crypto-webapp
+    path: patch-deploy-crypto-webapp.yaml
+
+  - target:
+      kind: Service
+      name: crypto-webapp
+    path: patch-svc-crypto-webapp.yaml
+

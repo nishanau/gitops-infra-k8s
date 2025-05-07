@@ -1,0 +1,9 @@
+# apps/crypto-webapp/overlays/prod/patch-svc-crypto-webapp.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: crypto-webapp
+spec:
+  selector:
+    environment: prod
+

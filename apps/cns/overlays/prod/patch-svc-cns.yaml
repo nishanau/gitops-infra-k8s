@@ -1,0 +1,9 @@
+# apps/cns/overlays/prod/patch-svc-cns.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: cns
+spec:
+  selector:
+    environment: prod
+
