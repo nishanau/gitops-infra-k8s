@@ -1,0 +1,4 @@
+resources:
+  - cloudflared-config.yaml
+  - cloudflared-deployment.yaml
+

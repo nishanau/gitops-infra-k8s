@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cloudflared-config
+  namespace: cloudflare
+data:
+  config.yaml: |
+    tunnel: 2e4e840d-bdc7-4aa1-8d40-5d7f5df54f78
+    credentials-file: /etc/cloudflared/cert.json
+    ingress:
+      - hostname: nishdevops.org
+        service: http://ingress-nginx-controller.ingress-nginx.svc.cluster.local:80
+      - service: http_status:404
+
