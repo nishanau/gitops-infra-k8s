@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: project-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+        - path: /cns
+          pathType: Prefix
+          backend:
+            service:
+              name: cns
+              port:
+                number: 80
+        - path: /crypto
+          pathType: Prefix
+          backend:
+            service:
+              name: crypto-webapp
+              port:
+                number: 80
+        - path: /api
+          pathType: Prefix
+          backend:
+            service:
+              name: crypto-webapp
+              port:
+                number: 80
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: react-portfolio
+              port:
+                number: 80
