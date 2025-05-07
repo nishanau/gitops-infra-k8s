@@ -18,9 +18,9 @@ spec:
         image: cloudflare/cloudflared:latest
         args:
           - tunnel
+          - --no-autoupdate
           - run
-          - --config
-          - /etc/cloudflared/config.yaml
+          - 2e4e840d-bdc7-4aa1-8d40-5d7f5df54f78
         volumeMounts:
           - name: config
             mountPath: /etc/cloudflared
