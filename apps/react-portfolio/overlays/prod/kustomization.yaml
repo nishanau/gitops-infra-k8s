@@ -18,3 +18,8 @@ patches:
       name: react-portfolio
     path: patch-svc-react-portfolio.yaml
 
+  - target:
+      kind: Deployment
+      name: react-portfolio
+    path: patch-readiness-react-portfolio.yaml
+
