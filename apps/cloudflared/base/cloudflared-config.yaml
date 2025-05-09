@@ -9,6 +9,6 @@ data:
     credentials-file: /etc/cloudflared/cert.json
     ingress:
       - hostname: nishdevops.org
-        service: http://ingress-nginx-controller.ingress-nginx:80
+        service: http://10.105.70.231:80
       - service: http_status:404
 
