@@ -21,6 +21,8 @@ spec:
           - --no-autoupdate
           - --protocol
           - http2
+          - --loglevel
+          - debug
           - run
           - 2e4e840d-bdc7-4aa1-8d40-5d7f5df54f78
         volumeMounts:
