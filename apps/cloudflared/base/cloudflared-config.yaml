@@ -7,6 +7,7 @@ data:
   config.yaml: |
     tunnel: 2e4e840d-bdc7-4aa1-8d40-5d7f5df54f78
     credentials-file: /etc/cloudflared/cert.json
+    loglevel: debug
     ingress:
       - hostname: nishdevops.org
         service: http://10.105.70.231:80
